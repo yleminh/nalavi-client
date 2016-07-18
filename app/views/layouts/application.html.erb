@@ -1,0 +1,761 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <title>Cửa hàng sách cũ NALAVI | Nalavi.com</title>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="Sách là một phần không thể thiếu trong cuộc sống của mỗi chúng ta. Sách giúp chúng ta mở mang tri thức, nuôi dưỡng tâm hồn, hoàn thiện phẩm chất đạo đức, biết yêu thương và trân trọng những giá trị của cuộc sống. Là kho tàng tri thức vô hạn của nhân loại, sách cần thiết cho mọi người ở mọi tầng lớp và lứa tuổi trong xã hội.">
+        <meta name="keywords" content="Nalavi.com">
+        <meta name="robots" content="INDEX,FOLLOW">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+        <!-- <link rel="dns-prefetch" href="//nalavi.com">
+        <link rel="dns-prefetch" href="//tikicdn.com">
+        <link rel="dns-prefetch" href="//tala.tikicdn.com">
+        <link rel="dns-prefetch" href="//vcdn.tikicdn.com"> -->
+        <link rel="icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="https://vcdn.tikicdn.com/assets/media/favicon.ico" type="image/x-icon">
+        <!-- <link rel="stylesheet" type="text/css" href="https://vcdn.tikicdn.com/assets/css/style.min.css?v=nvms_20160616115441"> -->
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <meta property="og:image" content="" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:height" content="200" />
+        
+        <link rel="apple-touch-icon" href="http://a5.mzstatic.com/us/r30/Purple69/v4/06/0e/6d/060e6d1e-a5f3-7b31-1e53-2493eb0d8d92/icon175x175.jpeg">
+        <meta name="apple-itunes-app" content="app-id=958100553">
+        <meta name="google-play-app" content="app-id=vn.tiki.app.tikiandroid">
+        <!-- BEGIN: GTM DATA LAYER -->
+        <script>
+            dataLayer = [];
+        </script>
+        <!-- END: GTM DATA LAYER -->
+        
+        
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body class="tiki-categories">
+        <nav class="offcanvas">
+            <a href="javascript:void(0)" class="header-close">
+                <i class="tiki-icons tiki-icons-close"></i>
+            </a>
+            <div class="header-account-mobile user-customer" style="display:none;">
+                <h2>Chào <span class="customer-name"></span></h2>
+                <ul>
+                    <li><a href="#" title="Đơn hàng của tôi"><i class="fa fa-list"></i>Đơn hàng của tôi</a></li>
+                    <li style="display: none" id="bookprofile">
+                        <a href="#" title="Tủ sách của tôi">
+                        <i class="fa fa-book"></i>Tủ sách của tôi</a></li>
+                        <li><a href="#" title="Thông báo của tôi"><i class="fa fa-bell"></i>
+                            <span class="header-account-notify">Thông báo của tôi</span>
+                        </a>
+                    </li>
+                    <li><a href="#" title="Tài khoản của tôi"><i class="fa fa-user"></i>Tài khoản của tôi</a></li>
+                    <li><a class="js-logout" title="Thoát tài khoản" href="#"><i class="fa fa-sign-out"></i>Thoát tài khoản</a></li>
+                </ul>
+            </div>
+            <div class="header-account-mobile user-guest" style="display:none;">
+                <h2><span>Nalavi</span> chào bạn</h2>
+                <ul>
+                    <li><a href="#" data-toggle="modal" data-target="#login-form" title="Đăng nhập"><i class="fa fa-sign-in"></i>Đăng nhập</a></li>
+                    <li><a href="#" data-toggle="modal" data-target="#register-form" title="Tạo tài khoản"><i class="fa fa-user-plus"></i>Tạo tài khoản</a></li>
+                </ul>
+            </div>
+
+            <div class="header-support-mobile">
+            
+                    <h3>Danh Mục Sách</h3><br/>
+                    <b>Sách Tiếng Việt</b>
+                    <ul>
+                        <li>
+                             <a href="#">Văn học - Tiểu Thuyết</a>
+                        </li>
+                        <li>
+                            <a href="#">Sách chuyên ngành</a>
+                        </li>
+                        <li>
+                            <a href="#">Sách Văn hóa - Du Lịch</a><br/>
+                        </li>
+                        <li>
+                            <a href="#">Truyện tranh - Manga</a><br/>
+                        </li>
+                        <li>
+                            <a href="#">Sách truyện thiếu nhi </a>    
+                        </li>
+                    </ul>                   
+                    <b>Sách Tiếng Nước ngoài</b>
+                    <ul>
+                        <li>
+                             <a href="#">Văn học - Tiểu Thuyết</a>
+                        </li>
+                        <li>
+                            <a href="#">Sách chuyên ngành</a>
+                        </li>
+                        <li>
+                            <a href="#">Sách Văn hóa - Du Lịch</a><br/>
+                        </li>
+                        <li>
+                            <a href="#">Truyện tranh - Manga</a><br/>
+                        </li>
+                        <li>
+                            <a href="#">Sách truyện thiếu nhi </a>    
+                        </li>
+                    </ul>            
+                </div>
+            </div>
+
+            <div class="header-apps-mobile">
+                <h5>Tải ứng dụng Nalavi để mua hàng tiện lợi hơn</h5>
+                <!-- <a href="market://details?id=vn.tiki.app.tikiandroid" target="_blank">
+                    <img alt="Get it on Google Play" src="https://vcdn.tikicdn.com/assets/img/google-play.svg">
+                </a> -->
+                <a href="#" target="_blank">
+                    <img alt="Get it on Google Play" src="https://vcdn.tikicdn.com/assets/img/google-play.svg">
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://vcdn.tikicdn.com/assets/img/app-store.svg">
+                </a>
+            </div>
+            <!-- <div class="header-support-mobile">
+                <h3>Hỗ trợ</h3>
+                <ul>
+                    <li>
+                        <a class="icon-phone" href="tel:19006035">Hotline: <span>1900-6035</span> (8-21h, kể cả T7 & CN)</a>
+                    </li>
+                    <li>
+                        <a href="http://hotro.tiki.vn/hc/vi" target="_blank" title="Các câu hỏi thường gặp">Các câu hỏi thường gặp</a>
+                    </li>
+                    <li>
+                        <a href="http://hotro.tiki.vn/hc/vi/categories/200126644" target="_blank" title="Hướng dẫn đặt hàng">Hướng dẫn đặt hàng</a>
+                    </li>
+                    <li>
+                        <a href="http://hotro.tiki.vn/hc/vi/categories/200123960" target="_blank" title="Phương thức vận chuyển">Phương thức vận chuyển</a>
+                    </li>
+                    <li>
+                        <a href="http://tiki.vn/doi-tra-de-dang" target="_blank" title="Chính sách đổi trả hàng">Chính sách đổi trả</a>
+                    </li>
+                </ul>
+            </div> -->
+        </nav>
+        
+        <div class="global-overlay"></div>
+        <header class="wrap-header">
+            <div class="container site-component">
+                <div class="row header-row-1">
+                    <div class="col-md-3 col-lg-3 header-row-1-inner">
+                        <button type="button" class="navbar-toggle collapsed hidden-lg hidden-md js-offcanvas-btn">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="account-notify-mobile"></span>
+                        </button>
+                        <p class="header-logo">
+                            <a href="http://nalavi.com/" title="Nalavi.com">
+                                <img src="https://nalavi.com/images/logo.png" width="190px" />
+                                <!-- <i class="tiki-icons-2 tiki-icons-2">Nalavi</i> -->
+                            </a>
+                        </p>
+                        <div class="user-cart-mobile collapsed hidden-lg hidden-md" data-container="body" data-placement="auto bottom">
+                            <a href="#" class="user-cart-link">
+                                <i class="fa fa-shopping-cart"></i>
+                                <span class="user-cart-quantity">10</span>
+                            </a>
+                        </div>
+                        <a href="#" title="Kiểm tra trạng thái Đơn hàng của bạn" class="order-tracking-shortcut is-mobile hidden">Kiểm tra Đơn hàng</a>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="col-md-5 col-lg-5 header-search-wrap">
+                        <form id="search_form" action="#" method="get" class="header-search">
+                            <div class="input-group">
+                                <div class="input-group-btn hidden-sm hidden-xs">
+                                    <button type="button" class="btn btn-default dropdown-toggle show-all-button" data-toggle="dropdown">
+                                    <span class="filter_box" data-category="">Tất cả</span><span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li data-category=""><a>Tất cả</a></li>
+                                        <li data-category="Sách"><a>Sách Tiếng Việt</a></li>
+                                        <li data-category="English Books"><a>Sách Tiếng Anh</a></li>
+                                        <li data-category="Văn học - Tiểu Thuyết"><a>Văn học - Tiểu Thuyết</a></li>                                       
+                                        <li data-category="Sách chuyên ngành"><a>Sách chuyên ngành</a></li>
+                                        <li data-category="Sách Văn hóa - Du Lịch"><a>Sách Văn hóa - Du Lịch</a></li>
+                                        <li data-category="Truyện tranh - Manga"><a>Truyện tranh - Manga</a></li>
+                                        <li data-category="Sách truyện thiếu nhi"><a>Sách truyện thiếu nhi</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" name="q" autocomplete="off" class="form-control" value=""  placeholder="Tìm kiếm sản phẩm, danh mục hay thương hiệu mong muốn...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="submit">
+                                    <span class="hidden-sm hidden-xs">Tìm</span>
+                                    <i class="fa fa-search hidden-lg hidden-md"></i>
+                                    </button>
+                                </span>
+                            </div>
+                            <div class="search-autocomplete">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-4 col-lg-4 visible-lg-block visible-md-block">
+                        <a href="#" title="Kiểm tra trạng thái Đơn hàng của bạn" class="order-tracking-shortcut">Kiểm tra Đơn hàng</a>
+                        <div class="header-user">
+                            <div class="user-cart" data-container="body" data-placement="auto bottom">
+                                <a href="#" class="user-cart-link">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span class="user-cart-text">Giỏ hàng</span>
+                                    <span class="user-cart-quantity">10</span>
+                                </a>
+                            </div>
+                            <div class="user-name js-header-user-name">
+                                <div class="user-name-link user-ajax-link">
+                                    <div class="user-avatar">
+                                        <img width="34" height="34" src="https://vcdn.tikicdn.com/assets/img/avatar-s.png" alt="">
+                                    </div>
+                                    <ul>
+                                        <li class="user-name-short">                                            
+                                            <span>Đăng nhập</span>
+                                        </li>
+                                        <li class="user-name-account">                                            
+                                            <span>Tài khoản</span>
+                                            <span>&amp; Đơn hàng</span>
+                                        </li>
+                                    </ul>
+                                    <span class="caret"></span>
+                                </div>
+                                <div class="user-name-box user-ajax-box">
+                                    <ul class="user-ajax-guest">
+                                        <li id="login_link">
+                                            <a href="#" data-toggle="modal" data-target="#login-form" title="Đăng Nhập" class="user-name-login">
+                                                <i class="fa fa-sign-in"></i>
+                                                Đăng nhập
+                                            </a>
+                                        </li>
+                                        <li id="login_fb_link">
+                                            <a
+                                                class="user-name-loginfb"
+                                                title="Đăng nhập bằng Facebook"
+                                                href="javascript: void(0)"
+                                                data-url="#">
+                                                <i class="fa fa-facebook-square"></i>
+                                                <span>Đăng nhập bằng</span><span> Facebook</span>
+                                            </a>
+                                        </li>
+                                        <li class="user-name-register">
+                                            <a href="#" title="Tạo tài khoản mới" data-toggle="modal" data-target="#register-form">
+                                                <i class="fa fa-user"></i>
+                                                <span>Tạo tài khoản</span>
+                                            </a>
+                                        </li>                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <!-- login box -->
+        <div class="modal" id="login-form" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="tiki-icons tiki-icons-close"></i>
+                        </button>
+                        <div class="head">
+                            <h2>Đăng nhập</h2>
+                            <p>
+                                <span>Bạn chưa có tài khoản? </span>
+                                <a href="#" data-toggle="modal" data-target="#register-form">Đăng ký</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form class="content" method="POST"
+                            action="#"
+                            id="login_popup_form">
+                            <div class="form-group popup_email" id="popup_login">
+                                <label class="control-label">Email</label>
+                                <input id="popup-login-email" type="text" class="form-control login" name="email" placeholder="Nhập Email">
+                                <span class="help-block ajax-message"></span>
+                            </div>
+                            <div class="form-group popup_password" id="popup_password">
+                                <label class="control-label">Mật khẩu</label>
+                                <input type="password" id="login_password" class="form-control login" name="password" placeholder="Nhập mật khẩu" autocomplete="off">
+                                <span class="help-block ajax-message"></span>
+                            </div>
+                            
+                            <div class="login-ajax-captcha" style="display:none">
+                                <div id="login-popup-recaptcha"></div>
+                            </div>
+                            <div class="form-group" id="error_captcha" style="margin-bottom: 15px">
+                                <span class="help-block ajax-message"></span>
+                            </div>
+                            <div class="form-group">
+                                <p class="reset">Quên mật khẩu? Nhấn vào <a data-toggle="modal" data-target="#reset-password-form" href="#">đây</a></p>
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" id ="login_popup_submit" class="btn btn-info btn-block">Đăng nhập</button>
+                            </div>
+                            <div class="form-group last">
+                                <a
+                                    class="btn btn-block btn-social btn-facebook user-name-loginfb"
+                                    title="Đăng nhập bằng Facebook"
+                                    href="javascript: void(0)"
+                                    data-url="#">
+                                    <i class="fa fa-facebook"></i>
+                                    <span>Đăng nhập bằng</span><span> Facebook</span>
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end login box -->
+        <!-- reset password -->
+        <div class="modal" id="reset-password-form" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="tiki-icons tiki-icons-close"></i>
+                        </button>
+                        <div class="head">
+                            <h2>Quên mật khẩu?</h2>
+                            <p>
+                                <span>Vui lòng gửi email. Chúng tôi sẽ gửi link khởi tạo mật khẩu mới qua email của bạn.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form method="POST" action="#" class="content" id="reset_popup_form">
+                            <div id="forgot_successful">
+                                <span></span>
+                            </div>
+                            <div class="form-group" id="forgot_pass">
+                                <input type="text" name="email" id="email" class="form-control" value="" required="required" placeholder="Nhập email">
+                                <span class="help-block"></span>
+                            </div>
+                            <div class="form-group last">
+                                <button type="button" id="reset_form_submit" class="btn btn-info">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end reset password -->
+        <!-- registration box -->
+        <div class="modal" id="register-form" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="tiki-icons tiki-icons-close"></i>
+                        </button>
+                        <div class="head">
+                            <h2>Đăng ký tài khoản</h2>
+                            <p>
+                                <span>Bạn đã có tài khoản?</span>
+                                <a href="#" data-toggle="modal" data-target="#login-form">Đăng nhập</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form class="content" method="POST" action ="#" id ="register_popup_form">
+                            <div class="left-col">
+                                <div form-group id='general_error'>
+                                    <span></span>
+                                </div>
+                                <div class="form-group" id="register_email">
+                                    <label class="control-label" for="email"><strong>Email:</strong></label>
+                                    <div class="input-wrap">
+                                        <input type="text" class="form-control register register-email-input" name="email" id="email" placeholder="Nhập Email">
+                                        <span class="help-block ajax-message"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_password">
+                                    <label class="control-label" for="pasword"><strong>Mật khẩu:</strong></label>
+                                    <div class="input-wrap">
+                                        <input type="password" class="form-control register" name="password" id="password" placeholder="Mật khẩu từ 6 đến 32 ký tự" autocomplete="off">
+                                        <span class="help-block ajax-message"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_name">
+                                    <div class="input-wrap-left">
+                                        <input type="checkbox" name="gender" id="gender" checked>
+                                    </div>
+                                    <div class="input-wrap">
+                                        <input type="text" class="form-control register" name="full_name" id="name" placeholder="Nhập họ tên">
+                                        <span class="help-block ajax-message"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="register_birthday">
+                                    <label class="control-label no-lh" for="birthdate">
+                                        <strong>Ngày Sinh:</strong>
+                                        <span><i>*</i> Không bắt buộc</span>
+                                    </label>
+                                    <div class="input-wrap">
+                                        <div id="birthday-picker-popup"></div>
+                                        <span class="help-block ajax-message" id="span-birthday"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="input-wrap">
+                                        <label for="subcribe" class="icheck-wrap">
+                                            <input type="checkbox" name="newsletter" class="icheck" checked>
+                                            Nhận các thông tin và chương trình khuyến mãi của Tiki qua email.
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="form-group policy-group">
+                                    <div class="input-wrap">
+                                        <p class="policy">Khi bạn nhấn Đăng ký, bạn  đã đồng ý thực hiện mọi giao dịch mua bán theo <a target="_blank" href="http://hotro.tiki.vn/hc/vi/articles/201971214">điều kiện sử dụng và chính sách của Tiki</a>.</p>
+                                    </div>
+                                </div>
+                                <div class="form-group last">
+                                    <div class="input-wrap">
+                                        <button type="submit" id="register_popup_submit" class="btn btn-info btn-block btn-register-submit">Đăng ký</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="right-col">
+                                <p class="text">Đăng nhập vào Tiki bằng tài khoản mạng xã hội</p>
+                                <div class="form-group last">
+                                    <a
+                                        class="btn btn-block btn-social btn-facebook user-name-loginfb"
+                                        title="Đăng nhập bằng Facebook"
+                                        href="javascript: void(0)"
+                                        data-url="#">
+                                        <i class="fa fa-facebook"></i>
+                                        <span>Đăng nhập bằng</span><span> Facebook</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end registration box -->
+        
+        <div class="wrap">
+            <div class="container">
+                <%= yield %>
+                
+            </div>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="box-related-product-footer"></div>
+                </div>
+            </div>          
+        </div>
+        
+        <footer class="wrap-footer">
+            <a href="#" class="to-top">Lên đầu Trang</a>
+            <a href="#" class="affix-top mobile-to-top hidden-md hidden-lg">
+            <i class="fa fa-angle-up"></i>
+            </a>
+            <div class="footer-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div class="row">
+                                <div class="col-md-3 footer-nav">
+                                    <h4 class="hidden-xs hidden-sm">Hỗ trợ khách hàng</h4>
+                                    <ul>
+                                        <li class="hidden-md hidden-lg footer-cart js-footer-cart">
+                                            <a href="http://tiki.vn/checkout/cart">Giỏ hàng (<span>0</span>)</a>
+                                        </li>  
+                                        <!-- <li class="footer-phone">
+                                            <a href="tel:19006035">
+                                                <span class="footer-hotline">Hotline: 1900-6035</span>
+                                                <span class="footer-price">(1000đ/phút <span class="hidden-xs hidden-sm">, 8-21h kể cả T7, CN</span>)</span>
+                                            </a>
+                                        </li> -->
+                                        <li class="footer-link-mobile footer-faq first">
+                                            <a href="#" target="_blank" title="Các câu hỏi thường gặp">Các câu hỏi thường gặp</a>
+                                        </li>
+                                        <li class="hidden-xs hidden-sm">
+                                            <a href="#" target="_blank" title="Email">Gửi yêu cầu hỗ trợ</a>
+                                        </li>
+                                        <li class="footer-link-mobile footer-help">
+                                            <a href="#" target="_blank" title="Hướng dẫn đặt hàng">Hướng dẫn đặt hàng</a>
+                                        </li>
+                                        <li class="footer-link-mobile footer-transport">
+                                            <a href="#" target="_blank" title="Phương thức vận chuyển">Phương thức vận chuyển</a>
+                                        </li>
+                                        <li class="footer-link-mobile footer-refund last">
+                                            <a href="#" target="_blank" title="Chính sách đổi trả hàng">Chính sách đổi trả</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 footer-nav footer-account">
+                                    <h4><a href="#">Tài khoản của bạn</a></h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="Lịch sử đơn hàng">Lịch sử đơn hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Xem trạng thái đơn hàng">Trạng thái đơn hàng</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="Thoát">Thoát</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 footer-nav footer-account is-guest">
+                                    <h4 class="hidden-xs hidden-sm"><a>Tài khoản của bạn</a></h4>
+                                    <ul>
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-target="#login-form" title="Đăng nhập">Đăng nhập</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" data-toggle="modal" data-target="#register-form" title="Đăng ký">Đăng ký</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 footer-nav hidden-xs hidden-sm">
+                                    <h4>Về Tiki.vn</h4>
+                                    <ul>
+                                        <li>
+                                            <a target="_blank" href="http://tiki.vn/gioi-thieu-ve-tiki" title="Giới thiệu Tiki.vn">Giới thiệu Tiki.vn</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://tuyendung.tiki.vn" target="_blank" title="Tuyển dụng">Tuyển Dụng</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://hotro.tiki.vn/hc/vi/articles/202216110" target="_blank" title="Chính sách bảo mật">Chính sách bảo mật</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://hotro.tiki.vn/hc/vi/articles/201971214" target="_blank" title="Điều khoản sử dụng">Điều khoản sử dụng</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://hoisachonline.tiki.vn" target="_blank" title="Hội Sách">Hội Sách Online</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://hotro.tiki.vn/hc/vi/articles/204153170-Các-bước-sử-dụng-Tiki-xu-và-Mã-giảm-giá" target="_blank" title="Giới thiệu Tiki Xu">Giới thiệu Tiki Xu</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://tiki.vn/tu-van" target="_blank" title="Tiki Tư Vấn">Tiki Tư Vấn</a>
+                                        </li>
+                                        <li>
+                                            <a href="http://tiki.vn/sach-b2b" target="_blank" title="Ưu đãi doanh nghiệp">Ưu đãi doanh nghiệp</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 footer-nav hidden-xs hidden-sm">
+                                    <h4>Hợp tác & Liên kết</h4>
+                                    <ul>
+                                        <li>
+                                            <a title="Bán hàng cùng Tiki.vn" href="http://tiki.vn/market-place" target="_blank">Bán hàng cùng Tiki.vn</a>
+                                        </li>
+                                        <li>
+                                            <a title="Quy chế hoạt động Sàn giao dịch TMĐT của Tiki.vn" href="#" target="_blank">Quy chế hoạt động Sàn GDTMĐT</a>
+                                        </li>
+                                        <li>
+                                            <a title="Ăn gì ở đâu" href="http://www.foody.vn" target="_blank">Foody.vn - Ăn gì ở đâu</a>
+                                        </li>
+                                        <li>
+                                            <a title="Đặt khách sạn giá rẻ" href="http://www.ivivu.com" target="_blank">iVIVU.com - Đặt khách sạn giá rẻ </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="footer-facebook hidden-xs hidden-sm">
+                                <div class="fb-like" data-href="https://www.facebook.com/tiki.vn" data-send="false" data-width="250" data-height="70" data-show-faces="true"></div>
+                            </div>                            
+                            <ul class="footer-social hidden-xs hidden-sm">
+                                <li>
+                                    <a href="http://www.youtube.com/user/TikiVBlog" title="Youtube" target="_blank"><i class="fa fa-youtube-play"></i>Youtube</a>
+                                </li>
+                            </ul>
+                            <div class="footer-apps">
+                                <p class="intro hidden-lg hidden-md">Tải ứng dụng Tiki.vn để mua hàng tiện lợi hơn</p>
+                                <a href="https://play.google.com/store/apps/details?id=vn.tiki.app.tikiandroid" target="_blank">
+                                    <img alt="Get it on Google Play" src="https://vcdn.tikicdn.com/assets/img/google-play.svg">
+                                </a>
+                                <a href="https://itunes.apple.com/vn/app/id958100553" target="_blank">
+                                    <img src="https://vcdn.tikicdn.com/assets/img/app-store.svg">
+                                </a>                            
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-7">
+                            <div class="footer-address">
+                                <p>© 2016 - Nalavi.com</p>
+                                <p><strong>Địa chỉ gửi hàng đổi/trả/bảo hành:</strong> 111, Đường abc, Đà Nẵng (Tham khảo <a href="http://tiki.vn/hau-mai" target="_blank">hướng dẫn đổi, trả, bảo hành</a> hoặc liên hệ 1900-6035 để được hướng dẫn trước khi gửi sản phẩm về Tiki)</p>
+                                <p>Địa chỉ văn phòng: 111, Đường abc, Đà Nẵng</p>
+                                <p>Giấy chứng nhận Đăng ký Kinh doanh số 0309532909 do Sở Kế hoạch và Đầu tư Thành phố Hồ Chí Minh cấp ngày 06/01/2010</p>
+                            </div>
+                        </div>
+                        <div class="col-md-5 visible-md-block visible-lg-block">
+                            <div class="footer-certificate-box">
+                                <a class="footer-trust" href="http://online.gov.vn/HomePage/WebsiteDisplay.aspx?DocId=21201" target="_blank" title="Chứng nhận sàn giao dịch TMĐT">
+                                    <span>Được chứng nhận</span>
+                                    <img class="img-responsive" src="https://vcdn.tikicdn.com/assets/img/seal-ecommerce.png" alt="Chứng nhận sàn giao dịch TMĐT">
+                                </a>
+                                <a class="footer-payment" href="#" title="Thanh toán an toàn trên Tiki.vn">
+                                    <span>Cách thức thanh toán</span>
+                                    <img class="img-responsive" src="https://vcdn.tikicdn.com/assets/media/safe.jpg" alt="Thanh toán an toàn trên Tiki.vn">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="tikiFriendBannerPopupCenter" style="display: none;" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <a href="#" class="popup">
+                            <img src="https://vcdn.tikicdn.com/assets/img/popup-tiki-friends.jpg" alt="..." />
+                        </a>
+                        <a href="#" class="close" data-dismiss="modal" aria-label="Close">Đóng <i class="fa fa-close">&nbsp;</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="fb-root"></div>
+        
+        <script>
+            var facebookAppId = 220558114759707;
+            // RECAPTCHA
+            var isNativeApp = false;
+            var rootUrl = 'http://nalavi.com';
+            /*var recaptchaKey = '6LcTOQUTAAAAAON_bNetEtgzm-yfBmCgLw17vxg_';*/
+            var renderRecaptcha = false;
+            var isHttpsPage = false;
+            var ajaxHttpsLink = [];/*["/customer/account/ajaxLogin", "/customer/account/ajaxCreate", "/customer/account/ajaxForgotPassword"];*/
+            var customerId = 0;
+            var showAffiliateUrl = 2;
+            var talalyticsStatus = 1;
+            var searchTuningVersion = "tuning.v0";
+        </script>
+
+        
+
+        <script type="text/javascript">
+        
+            var jq = jQuery.noConflict();
+            
+            function getCookie(name) {
+                var nameEQ = encodeURIComponent(name) + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    
+                    var c = ca[i];
+                    while (c.charAt(0) === ' ') {
+                        c = c.substring(1, c.length);
+                    }
+        
+                    if (c.indexOf(nameEQ) === 0) {
+                        return decodeURIComponent(c.substring(nameEQ.length, c.length));
+                    }
+                }
+                return null;
+            }
+        </script>
+
+        <script>
+            (function($) {
+                var recommendation = function () {
+                    if(typeof $('.box-related-product-footer').get(0) !== 'undefined') {
+                        
+                        var alt = "recoflatform";
+                        $.get("/product/box/ajaxABCTestingRelatedProductFooter?type="+alt, function(data) {
+                            $(".box-related-product-footer").html(data).find('.js-list-product').slideDown();
+                            $('.box-related-product-footer').fadeIn(1);
+                        
+                            if (typeof initSwiper !== 'undefined') {
+                                initSwiper('.box-related-product-footer .js-list-product', {
+                                    slidesPerView: 5,
+                                    slidesPerGroup: 5,
+                                    breakpoints: {
+                                        // 0 - 639
+                                        639: {
+                                            slidesPerView: 2,   
+                                            slidesPerGroup: 2
+                                        },
+                                        // 640 - 991
+                                        991: {
+                                            slidesPerView: 3,
+                                            slidesPerGroup: 3
+                                        },
+                                        // 992 - 1199
+                                        1199: {
+                                            slidesPerView: 4,
+                                            slidesPerGroup: 4
+                                        }
+                                    }
+                                });
+                            }
+                        });
+                    }
+                };
+        
+                if (typeof recommendation !== 'undefined') {
+                    recommendation();
+                }
+            })(jq);
+        </script>
+
+        
+        <script type="text/javascript">
+            var google_tag_params = {dynx_pagetypes: 'category', ecomm_pagetype : 'category'};
+        </script>
+
+        <!-- FACEBOOK PIXEL -->
+        <!-- <script>
+            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+            n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','//connect.facebook.net/en_US/fbevents.js');
+            if (typeof fbq === 'function') {
+                fbq('init', '1541902979357787');
+                fbq('track', 'PageView');
+            }
+        </script> -->
+        <noscript>
+            <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1541902979357787&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- END FACEBOOK PIXEL -->
+        <!--BEGIN CRITEO-->        
+        <script>
+            window.criteo_q = window.criteo_q || [];
+            window.criteo_q.push(
+                { event: "setAccount", account: 12578 },
+                { event: "setSiteType", type: "d" }
+            );
+        </script>
+        <!--END CRITEO-->
+
+        <!-- HANDLE MESSAGE FROM FACEBOOK LOGIN -->
+        <script>
+            // opener:
+            window.onmessage = function (e) {
+                switch (e.data) {
+                    case 'fb_reload_page': {
+                        window.location.reload(true);
+                    }
+                    break;
+                    case 'fb_redirect_ref': {
+                        window.location.href = "";
+                    }
+                    break;
+                    default: break;
+                }
+            }
+        </script>
+        <!-- AND HANDLE MESSAGE FROM FACEBOOK -->
+    </body>
+</html>
